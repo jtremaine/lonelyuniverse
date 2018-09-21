@@ -19,6 +19,22 @@ test_solar(void)
 		if (error != 0)
 			goto out;
 
+		error = add_people(&solar);
+		if (error != 0)
+			goto out;
+
+		error = dump_solar(&solar);
+		if (error != 0)
+			goto out;
+
+		error = remove_people(&solar);
+		if (error != 0)
+			goto out;
+
+		error = dump_solar(&solar);
+		if (error != 0)
+			goto out;
+
 	}
 
  out:
